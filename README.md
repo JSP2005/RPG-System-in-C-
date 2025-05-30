@@ -1,4 +1,4 @@
-# RPG System in C++
+# Simple RPG Battle Game
 
 Project Overview
 
