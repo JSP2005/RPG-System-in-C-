@@ -1,4 +1,4 @@
-# Simple RPG Battle Game
+# Simple RPG Battle Game C++
 
 Project Overview
 
