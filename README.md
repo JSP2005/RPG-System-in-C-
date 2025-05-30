@@ -4,6 +4,7 @@ Project Overview
 
 This is a simple console-based RPG battle game written in C++. The player chooses a character class and then battles through a series of enemies: a Fighter, an Archer, and finally a Boss. The game demonstrates basic object-oriented programming concepts such as inheritance, polymorphism, and encapsulation. It also includes a simple turn-based combat system where the player can choose attack types.
 
+-----------------
 
 How to Play
 
@@ -17,6 +18,7 @@ Defeat enemies one by one.
 
 Survive until you defeat the final Boss to win.
 
+-----------------
 
 Class Descriptions
 
@@ -61,6 +63,7 @@ Description: The final and toughest enemy in the game.
 
 Purpose: Provides the final challenge for the player.
 
+-----------------
 
 Additional Notes
 
