@@ -24,7 +24,7 @@ void battle(Player* player, Character* enemy) {
             cout << "Invalid choice, you lose your turn.\n";
         }
 
-        cout << enemy->getName() << " health: " << enemy->getHealth() << endl;
+        cout << enemy->getName() << " health: " << enemy->getHealth() <<  " \n " << endl;
 
         if (enemy->getHealth() <= 0) {
             cout << enemy->getName() << " has been defeated. You won this battle!\n";
