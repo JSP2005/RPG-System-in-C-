@@ -72,3 +72,7 @@ The game uses polymorphism to allow different character types to implement their
 The combat loop continues until either the player or the current enemy’s health reaches zero.
 
 The player can choose between normal and bonus attacks, affecting the damage dealt.
+
+![Simple_RPG_Battle_Game_UML](https://github.com/user-attachments/assets/d4329f2d-d3d2-464e-935b-9e76288e469a)
+
+
