@@ -1,77 +1,32 @@
 # Simple RPG Battle Game C++
 
-Project Overview
+This project is a turn-based RPG battle simulator developed in C++. It applies fundamental object-oriented programming (OOP) concepts such as inheritance, polymorphism, method overloading, overriding and encapsulation. The user selects a character class and participates in a combat sequence against three enemy types: a Fighter, an Archer, and a Boss. The game proceeds until either the player defeats all enemies or is defeated.
 
-This is a simple console-based RPG battle game written in C++. The player chooses a character class and then battles through a series of enemies: a Fighter, an Archer, and finally a Boss. The game demonstrates basic object-oriented programming concepts such as inheritance, polymorphism, and encapsulation. It also includes a simple turn-based combat system where the player can choose attack types.
+Problem Statement
 
------------------
+The purpose of this project is to simulate a basic combat system using OOP in C++. The player controls a character, chooses between different attack options, and battles enemies with distinct behaviors. This setup mirrors the structure of simple RPG games and is useful for demonstrating how OOP principles can be used to model real-world systems like game mechanics.
 
-How to Play
+Class Structure
 
-Run the game.
+The Character class is the base class representing any combat participant in the game. It includes attributes such as name and a Stats object, which handles health and attack values. The Character class also defines a virtual attack method, allowing derived classes to implement their own versions. This class is not meant to be instantiated directly and is therefore an abstract class. 
 
-Choose your character class (Swordsman or Mage).
+The Stats class is a utility class used by all characters to encapsulate their health and attack attributes. It provides methods to retrieve and update these values in a controlled manner.
 
-Enter commands to perform normal or bonus attacks.
+The Player class inherits from Character and adds functionality specific to player-controlled characters. It includes an overloaded attack method that allows an optional bonus damage value. Like Character, this class is not intended to be instantiated directly but provides a foundation for concrete player classes.
 
-Defeat enemies one by one.
+Two classes, Swordsman and Mage, inherit from Player. These represent the character types the user can choose to play. They each implement the base attack method and benefit from the attack overload with bonus damage.
 
-Survive until you defeat the final Boss to win.
+On the enemy side, there are three classes: Fighter, Archer, and Boss, which all derive from Character. Each one represents an enemy the player must face and can have distinct stats or attack behavior.
 
------------------
+Gameplay Flow
 
-Class Descriptions
+At the beginning of the game, the user is prompted to choose between playing as a Swordsman or a Mage. Once a character is selected, the player faces the Fighter, the Archer, and finally the Boss in sequential battles. During each turn, the player is given the option to perform a normal attack or a bonus attack. After the player's action, the enemy retaliates if still alive. This cycle continues until either the player defeats all enemies or their health reaches zero.
 
-Character
+Object-Oriented Concepts Demonstrated
 
-Description: The abstract base class representing any game character.
-
-Purpose: Provides common attributes (name, stats) and methods (attack, takeDamage) that all characters share.
-
-Key Methods:
-
-attack(Character* target): Virtual method to attack another character.
-
-takeDamage(int dmg): Reduces health based on damage taken.
+This project effectively demonstrates several key OOP concepts. Inheritance is used to define a class hierarchy where different character types share common functionality. Polymorphism allows the game loop to interact with characters using base class pointers, enabling dynamic behavior based on the actual object type. Method overloading is used in the Player class to allow different attack methods. Override is used to ensure that the attack method in the derived classes correctly overrides the virtual attack method declared in the base class Character. Encapsulation is enforced through the Stats class, which provides controlled access to the characters' health and attack values.
 
 
-Player (inherits from Character)
-
-Description: Represents the player-controlled characters.
-
-Purpose: Extends Character with player-specific behavior.
-
-Key Classes:
-
-Swordsman: A melee fighter with balanced health and attack.
-
-Mage: A magic user with unique stats and attacks.
-
-
-Fighter (inherits from Character)
-Description: An enemy character that the player fights first.
-
-Purpose: Demonstrates enemy behavior and stats.
-
-Archer (inherits from Character)
-Description: A ranged enemy that the player fights second.
-
-Purpose: Provides variation in enemy types and combat styles.
-
-Boss (inherits from Character)
-Description: The final and toughest enemy in the game.
-
-Purpose: Provides the final challenge for the player.
-
------------------
-
-Additional Notes
-
-The game uses polymorphism to allow different character types to implement their own versions of attack.
-
-The combat loop continues until either the player or the current enemy’s health reaches zero.
-
-The player can choose between normal and bonus attacks, affecting the damage dealt.
 
 ![Simple_RPG_Battle_Game_UML](https://github.com/user-attachments/assets/d4329f2d-d3d2-464e-935b-9e76288e469a)
 
