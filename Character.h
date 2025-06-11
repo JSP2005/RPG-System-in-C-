@@ -19,7 +19,7 @@ public:
     int getAttack();
     void takeDamage(int dmg);
 
-    virtual void attack(Character* target);  
+    virtual void attack(Character* target) = 0;  
     
 	virtual ~Character() {}
 };
