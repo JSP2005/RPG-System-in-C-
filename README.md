@@ -27,6 +27,6 @@ Object-Oriented Concepts Demonstrated
 This project effectively demonstrates several key OOP concepts. Inheritance is used to define a class hierarchy where different character types share common functionality. Polymorphism allows the game loop to interact with characters using base class pointers, enabling dynamic behavior based on the actual object type. Method overloading is used in the Player class to allow different attack methods. Override is used to ensure that the attack method in the derived classes correctly overrides the virtual attack method declared in the base class Character. Encapsulation is enforced through the Stats class, which provides controlled access to the characters' health and attack values.
 
 
-![Simple RPG Battle Game C++ UML drawio](https://github.com/user-attachments/assets/670bbcba-d6fb-45e6-8604-0a4bf57afd52)
+![Simple RPG Battle Game C++ UML drawio (1)](https://github.com/user-attachments/assets/1059d5f0-8e7a-4c97-91cc-a058d399eae8)
 
 
